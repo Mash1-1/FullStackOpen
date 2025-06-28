@@ -4,7 +4,7 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    Note Right of browser: The browser sends the information to the server and it goes on to the reloading process.
+    server->>browser: status 302 (reload the page)
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     server-->>browser: HTML document
     deactivate server
