@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    server->>browser: 201 Created (Note created message).
+
+    Note right of browser : The page then rerenders the notes list which now contains the new note appended to it.
